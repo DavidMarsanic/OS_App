@@ -11,10 +11,9 @@ import { NhostApolloProvider } from '@nhost/react-apollo';
 
 // Use environment variables for Nhost configuration
 const nhost = new NhostClient({
-  backendUrl: `https://${process.env.REACT_APP_NHOST_SUBDOMAIN}.nhost.app`,
+  subdomain: process.env.REACT_APP_NHOST_SUBDOMAIN,
   region: process.env.REACT_APP_NHOST_REGION
 })
-
 
 function App() {
   console.log('App component rendered'); // <-- Added for debugging
