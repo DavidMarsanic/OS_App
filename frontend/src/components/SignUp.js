@@ -3,7 +3,7 @@ import { useSignUpEmailPassword } from '@nhost/react';
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Input from './Input';
-import Spinner from './Spinner'
+import Spinner from './Spinner';
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -17,23 +17,27 @@ const SignUp = () => {
     isSuccessful,
     needsEmailVerification,
     isError,
-    error }
-    = useSignUpEmailPassword();
+    error,
+  } = useSignUpEmailPassword();
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
 
-    signUpEmailPassword(email, password, {
-      displayName: `${firstName} ${lastName}`.trim(),
-      metadata: {
-        firstName,
-        lastName
-      }
-    })
+    try {
+      await signUpEmailPassword(email, password, {
+        displayName: `${firstName} ${lastName}`.trim(),
+        metadata: {
+          firstName,
+          lastName,
+        },
+      });
+    } catch (error) {
+      console.error('Sign up failed:', error);
+    }
   };
 
   if (isSuccessful) {
-    return <Navigate to="/" replace={true} />
+    return <Navigate to="/" replace={true} />;
   }
 
   const disableForm = isLoading || needsEmailVerification;
@@ -43,61 +47,60 @@ const SignUp = () => {
       <div className={styles.card}>
         <div className={styles['logo-wrapper']}>
           <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
-
-          {needsEmailVerification ? (
-            <p>className= {styles['verification-text']}
-              Please check your email and click on the verification link to verify your email!
-            </p>
-
-          ) : (
-            <form onSubmit={handleOnSubmit} className={styles.form}></form>
-
-          )}
         </div>
 
         <form onSubmit={handleOnSubmit} className={styles.form}>
+          {needsEmailVerification ? (
+            <p className={styles['verification-text']}>
+              Please check your email and click on the verification link to verify your email!
+            </p>
+          ) : null}
+
           <div className={styles['input-group']}>
             <Input
               label="First name"
               value={firstName}
-              onChange={e => setFirstName(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
               required
               disabled={disableForm}
             />
             <Input
               label="Last name"
               value={lastName}
-              onChange={e => setLastName(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
               required
               disabled={disableForm}
-
             />
           </div>
           <Input
             type="email"
             label="Email address"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
             disabled={disableForm}
-
           />
           <Input
             type="password"
             label="Create password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             required
             disabled={disableForm}
-
           />
 
-          <button type="submit" className={styles.button} disabled={isLoading || disableForm} >
+          <button
+            type="submit"
+            className={styles.button}
+            disabled={isLoading || disableForm}
+          >
             {isLoading ? <Spinner /> : 'Create account'}
           </button>
 
           {isError && <p>Error: {error.message}</p>}
-          {needsEmailVerification && <p>Please verify your email address to continue.</p>}
+          {needsEmailVerification && (
+            <p>Please verify your email address to continue.</p>
+          )}
         </form>
       </div>
 
