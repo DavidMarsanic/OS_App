@@ -11,7 +11,14 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { signUpEmailPassword, isLoading, isSuccessful, needsEmailVerification, isError, error } = useSignUpEmailPassword();
+  const {
+    signUpEmailPassword,
+    isLoading,
+    isSuccessful,
+    needsEmailVerification,
+    isError,
+    error }
+    = useSignUpEmailPassword();
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -29,11 +36,23 @@ const SignUp = () => {
     return <Navigate to="/" replace={true} />
   }
 
+  const disableForm = isLoading || needsEmailVerification;
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles['logo-wrapper']}>
           <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+
+          {needsEmailVerification ? (
+            <p>className= {styles['verification-text']}
+              Please check your email and click on the verification link to verify your email!
+            </p>
+
+          ) : (
+            <form onSubmit={handleOnSubmit} className={styles.form}></form>
+
+          )}
         </div>
 
         <form onSubmit={handleOnSubmit} className={styles.form}>
@@ -43,12 +62,15 @@ const SignUp = () => {
               value={firstName}
               onChange={e => setFirstName(e.target.value)}
               required
+              disabled={disableForm}
             />
             <Input
               label="Last name"
               value={lastName}
               onChange={e => setLastName(e.target.value)}
               required
+              disabled={disableForm}
+
             />
           </div>
           <Input
@@ -57,6 +79,8 @@ const SignUp = () => {
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
+            disabled={disableForm}
+
           />
           <Input
             type="password"
@@ -64,9 +88,11 @@ const SignUp = () => {
             value={password}
             onChange={e => setPassword(e.target.value)}
             required
+            disabled={disableForm}
+
           />
 
-          <button type="submit" className={styles.button} disabled={isLoading}>
+          <button type="submit" className={styles.button} disabled={isLoading || disableForm} >
             {isLoading ? <Spinner /> : 'Create account'}
           </button>
 
