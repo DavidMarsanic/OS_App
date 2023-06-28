@@ -4,6 +4,21 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useOutletContext } from 'react-router-dom';
 import Input from '../components/Input';
+import { gql, useMutation } from '@apollo/client';
+import { toast } from 'react-hot-toast';
+
+const UPDATE_USER_MUTATION = gql`
+  mutation UpdateUser($id: uuid!, $displayName: String!, $metadata: jsonb!) {
+    update_users_by_pk(
+      pk_columns: { id: $id },
+      _set: { display_name: $displayName, metadata: $metadata }
+    ) {
+      id
+      display_name
+      metadata
+    }
+  }
+`;
 
 const Profile = () => {
   const { user } = useOutletContext();
@@ -15,8 +30,27 @@ const Profile = () => {
   const isLastNameDirty = lastName !== user?.metadata?.lastName;
   const isProfileFormDirty = isFirstNameDirty || isLastNameDirty;
 
+  const [mutateUser, { loading: updatingProfile }] =
+    useMutation(UPDATE_USER_MUTATION);
+
   const updateUserProfile = async e => {
     e.preventDefault();
+
+    try {
+      await mutateUser({
+        variables: {
+          id: user.id,
+          displayName: `${firstName} ${lastName}`.trim(),
+          metadata: {
+            firstName,
+            lastName
+          }
+        }
+      });
+      toast.success('Updated successfully', { id: 'updateProfile' });
+    } catch (error) {
+      toast.error('Unable to update profile', { id: 'updateProfile' })
+    }
   };
 
   return (
@@ -41,6 +75,7 @@ const Profile = () => {
                   value={firstName}
                   onChange={e => setFirstName(e.target.value)}
                   required
+                  disabled={updatingProfile}
                 />
                 <Input
                   type="text"
@@ -48,6 +83,8 @@ const Profile = () => {
                   value={lastName}
                   onChange={e => setLastName(e.target.value)}
                   required
+                  disabled={updatingProfile}
+
                 />
               </div>
               <div className={styles['input-email-wrapper']}>
@@ -56,6 +93,8 @@ const Profile = () => {
                   label="Email address"
                   value={user?.email}
                   readOnly
+                  disabled={updatingProfile}
+
                 />
               </div>
             </div>
@@ -63,7 +102,7 @@ const Profile = () => {
             <div className={styles['form-footer']}>
               <button
                 type="submit"
-                disabled={!isProfileFormDirty}
+                disabled={!isProfileFormDirty || updatingProfile}
                 className={styles.button}
               >
                 Update

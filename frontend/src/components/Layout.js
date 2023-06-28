@@ -1,6 +1,6 @@
 import styles from '../styles/components/Layout.module.css';
-import { useSignOut } from '@nhost/react';
 import { Fragment } from 'react';
+import { useSignOut, useUserData } from '@nhost/react';
 import { Outlet, Link } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import {
@@ -11,8 +11,9 @@ import {
 } from '@heroicons/react/outline';
 import Avatar from './Avatar';
 
+
 const Layout = () => {
-  const user = null;
+  const user = useUserData();
   const { signOut } = useSignOut();
 
   const menuItems = [

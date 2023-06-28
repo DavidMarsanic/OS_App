@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
   const { user } = useOutletContext();
+  console.log(user);
+
 
   return (
     <>
