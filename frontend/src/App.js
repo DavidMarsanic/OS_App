@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import LandingPage from './pages/LandingPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import { NhostApolloProvider } from '@nhost/react-apollo';
 
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="sign-up" element={<SignUp />} />
             <Route path="sign-in" element={<SignIn />} />
+            <Route path="/join" element={<LandingPage />} />
             <Route path="/" element={
               <ProtectedRoute>
                 <Layout />
