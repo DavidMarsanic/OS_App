@@ -5,6 +5,11 @@ import styles from '../styles/pages/LandingPage.module.css';
 const LandingPage = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.card}>
+                <div className={styles['logo-wrapper']}>
+                    <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+                </div>
+            </div>
             <header className={styles.header}>
                 <h1 className={styles.heading}>Welcome to Our Open Source Platform</h1>
                 <p className={styles.subheading}>A place for developers to contribute to open-source projects and be rewarded</p>

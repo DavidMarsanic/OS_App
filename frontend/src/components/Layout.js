@@ -38,9 +38,6 @@ const Layout = () => {
     <div>
       <header className={styles.header}>
         <div className={styles['header-container']}>
-          <Link to="/">
-            <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
-          </Link>
 
           <Menu as="div" className={styles.menu}>
             <Menu.Button className={styles['menu-button']}>
@@ -88,14 +85,14 @@ const Layout = () => {
             </Transition>
           </Menu>
         </div>
-      </header>
+      </header >
 
       <main className={styles.main}>
         <div className={styles['main-container']}>
           <Outlet context={{ user }} />
         </div>
       </main>
-    </div>
+    </div >
   );
 };
 

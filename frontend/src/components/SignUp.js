@@ -46,9 +46,8 @@ const SignUp = () => {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles['logo-wrapper']}>
-          <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+          <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
         </div>
-
         <form onSubmit={handleOnSubmit} className={styles.form}>
           {needsEmailVerification ? (
             <p className={styles['verification-text']}>
