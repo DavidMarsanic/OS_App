@@ -67,8 +67,8 @@
 
 .menu-button>svg {
   margin-right: 1px;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 0.25rem;
+  height: 0.25rem;
   flex-shrink: 0;
   color: rgb(107, 114, 128);
 }
@@ -163,19 +163,14 @@
 }
 
 .menu-items {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .menu-item {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.menu-item:last-child {
-  border-top-width: 1px;
-  padding-top: 0.5rem;
-  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem, 0.5rem, 0.5rem;
+  width: 10rem;
+  align-items: left;
 }
 
 .menu-item>a,

@@ -10,8 +10,8 @@ const Dashboard = () => {
           <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
         </div>
         <div className={styles.form}>
-          <h1>Welcome to the Dashboard</h1>
-          <p>This is the home page after you have logged in.</p>
+          <h1>Thanks for signing in!</h1>
+          <p>The app is still a work in progress. We'll keep you updated!</p>
         </div>
       </div>
       <p className={styles.text}>
