@@ -3,11 +3,10 @@ import styles from '../styles/pages/LandingPage.module.css';
 const LandingPage = () => {
     return (
         <div className={styles.landing}>
-            <div className={styles.logoWrapper}>
-                <img className={styles.logo} src={process.env.PUBLIC_URL + '/logo.svg'} alt="logo" />
-            </div>
-
             <section className={styles.heroSection}>
+                <div className={styles.logoWrapper}>
+                    <img className={styles.logo} src={process.env.PUBLIC_URL + '/logo.svg'} alt="logo" />
+                </div>
                 <h1 className={styles.heroTitle}>Unleash Your Creative Potential</h1>
                 <p className={styles.heroText}>
                     We believe that every individual has unique talents. Our platform is built to help you discover and express your creativity. Join us and unlock your potential.
