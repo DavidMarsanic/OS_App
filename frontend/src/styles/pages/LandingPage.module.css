@@ -17,38 +17,48 @@
 
 .heroSection {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 8rem;
 }
 
 .sectionBox {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     padding: 1rem;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    width: 90%;
+    margin-bottom: 5rem;
+    width: 50%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
 .heroTitle {
-    font-size: 3rem;
-    color: #FFFFFF;
-    margin-bottom: 1rem;
-    font-weight: bold;
+    font-size: 7rem;
+    /* Headings are typically larger, 3.2rem is about 51px */
+    font-weight: 600;
+    /* Shopify typically uses semi-bold font weights for headings */
+    /* Rest of your styles */
 }
 
 .heroText,
 .sectionText {
-    font-size: 1.2rem;
-    color: #4B5563;
-    line-height: 1.6;
-    margin: 0 auto 2rem auto;
+    font-size: 1.6rem;
+    /* Body text can be around 1.6rem, which is about 26px */
+    font-weight: 400;
+    /* Shopify typically uses regular font weight for body text */
+    /* Rest of your styles */
 }
 
 .sectionTitle {
-    font-size: 2rem;
-    color: #374151;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    /* Sub-headings can be smaller than main headings, 2.4rem is about 38px */
+    font-weight: 600;
+    /* Sub-headings typically use semi-bold font weight as well */
+    /* Rest of your styles */
 }
 
 .ctaButton {
