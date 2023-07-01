@@ -45,9 +45,11 @@ const SignUp = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles['logo-wrapper']}>
-          <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
-        </div>
+        <Link to="/join">
+          <div className={styles['logo-wrapper']}>
+            <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+          </div>
+        </Link>
         <form onSubmit={handleOnSubmit} className={styles.form}>
           {needsEmailVerification ? (
             <p className={styles['verification-text']}>

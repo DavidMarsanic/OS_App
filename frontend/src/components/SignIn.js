@@ -32,10 +32,11 @@ const SignIn = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles['logo-wrapper']}>
-          <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
-        </div>
-
+        <Link to="/join">
+          <div className={styles['logo-wrapper']}>
+            <img className={styles.logo} src={process.env.PUBLIC_URL + 'logo.svg'} alt="logo" />
+          </div>
+        </Link>
         {needsEmailVerification ? (
           <p className={styles['verification-text']}>
             Please check your email and click on the verification link to verify your email!
