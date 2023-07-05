@@ -2,13 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { NhostClient, NhostProvider } from '@nhost/react'
 import Layout from './components/Layout';
-import SignUp from './pages/SignUp';
-import SignIn from './pages/SignIn';
-import Dashboard from './pages/Dashboard';
-import Profile from './pages/Profile';
-import Test from './pages/Test';
-import LandingPage from './pages/LandingPage';
-import ProtectedRoute from './components/ProtectedRoute';
+import {
+  SignUp, SignIn, Dashboard, Profile, Test, ProtectedRoute, LandingPage
+} from './pages';
 import { NhostApolloProvider } from '@nhost/react-apollo';
 
 // Use environment variables for Nhost configuration
