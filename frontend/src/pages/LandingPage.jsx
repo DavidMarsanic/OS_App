@@ -11,8 +11,6 @@ const LandingPage = () => (
                 <Navbar />
             </div>
         </div>
-        <img className={styles.logo} src={process.env.PUBLIC_URL + '/logo.svg'} alt="logo" />
-
         <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}></div>
             <Hero />
