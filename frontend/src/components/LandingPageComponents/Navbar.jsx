@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { close, logo, menu } from '../../assets';
 import { navLinks } from '../../constants';
 
+// https://www.youtube.com/watch?v=_oO4Qi5aVZs
+
 const NavBar = () => {
 
     const [toggle, setToggle] = useState(false)
@@ -57,5 +59,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-// https://www.youtube.com/watch?v=_oO4Qi5aVZs

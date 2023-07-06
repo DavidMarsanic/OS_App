@@ -6,6 +6,7 @@ import {
   SignUp, SignIn, Dashboard, Profile, Test, LandingPage
 } from './pages';
 import { NhostApolloProvider } from '@nhost/react-apollo';
+import './index.css';
 
 // Use environment variables for Nhost configuration
 const nhost = new NhostClient({
