@@ -3,8 +3,6 @@ import { useState } from 'react'
 import { close, logo, menu } from '../../assets';
 import { navLinks } from '../../constants';
 
-// https://www.youtube.com/watch?v=_oO4Qi5aVZs
-
 const NavBar = () => {
 
     const [toggle, setToggle] = useState(false)
@@ -26,6 +24,11 @@ const NavBar = () => {
                         </a>
                     </li>
                 ))}
+                <li className="ml-4">
+                    <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full">
+                        Sign Up
+                    </button>
+                </li>
             </ul>
 
             <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -49,6 +52,11 @@ const NavBar = () => {
                                 </a>
                             </li>
                         ))}
+                        <li className="mt-4">
+                            <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full">
+                                Sign Up
+                            </button>
+                        </li>
                     </ul>
                 </div>
 

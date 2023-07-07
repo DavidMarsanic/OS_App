@@ -1,197 +1,109 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets";
-
 export const navLinks = [
     {
         id: "home",
         title: "Home",
     },
     {
-        id: "features",
-        title: "Features",
+        id: "developers",
+        title: "For Developers",
     },
     {
-        id: "product",
-        title: "Product",
+        id: "users",
+        title: "For Users",
     },
     {
-        id: "clients",
-        title: "Clients",
+        id: "mission",
+        title: "Our Mission",
     },
 ];
 
 export const features = [
     {
         id: "feature-1",
-        icon: star,
-        title: "Rewards",
+        title: "Becoming an Independent Developer",
         content:
-            "The best credit cards offer some tantalizing combinations of promotions and prizes",
+            "We simplify the process of becoming an independent developer. With our platform, you can focus on what you do best - creating innovative solutions.",
     },
     {
         id: "feature-2",
-        icon: shield,
-        title: "100% Secured",
+        title: "Monetization Simplified",
         content:
-            "We take proactive steps make sure your information and transactions are secure.",
+            "You don't have to worry about monetization schemes. We handle that for you, ensuring you're compensated for the value you bring to the community.",
     },
     {
         id: "feature-3",
-        icon: send,
-        title: "Balance Transfer",
+        title: "Ad-Free Experience",
         content:
-            "A balance transfer credit card can save you a lot of money in interest charges.",
+            "Your apps can be free of intrusive ads and restrictive free tiers. This means a better experience for your users and less hassle for you.",
     },
-];
-
-export const feedback = [
     {
-        id: "feedback-1",
+        id: "feature-4",
+        title: "Real-Time User Feedback",
         content:
-            "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-        name: "Herman Jensen",
-        title: "Founder & Leader",
-        img: people01,
+            "Get immediate feedback from users. This helps you understand what users want, reducing the risk of building something that doesn't meet their needs.",
     },
     {
-        id: "feedback-2",
+        id: "feature-5",
+        title: "Earn from Your Solutions",
         content:
-            "Money makes your life easier. If you're lucky to have it, you're lucky.",
-        name: "Steve Mark",
-        title: "Founder & Leader",
-        img: people02,
+            "If others incorporate your solution into a new app, you get compensated. It's a win-win situation.",
     },
+];
+
+export const userFeatures = [
     {
-        id: "feedback-3",
+        id: "user-feature-1",
+        title: "Ease of Use",
         content:
-            "It is usually people in the money business, finance, and international trade that are really rich.",
-        name: "Kenn Gallagher",
-        title: "Founder & Leader",
-        img: people03,
+            "With Open Source Platform, accessing open-source apps is as easy as clicking a button. No need to navigate through multiple platforms - it's all here.",
+    },
+    {
+        id: "user-feature-2",
+        title: "Community-Vetted Apps",
+        content:
+            "All apps on our platform are community-vetted and verified for security and privacy. You can use them with confidence.",
+    },
+    {
+        id: "user-feature-3",
+        title: "Ad-Free and Privacy-Focused",
+        content:
+            "We prioritize your privacy. Our platform is free of ads, trackers, and we don't sell your data.",
+    },
+    {
+        id: "user-feature-4",
+        title: "All in One Place",
+        content:
+            "No need to pay for dozens of apps and services. Whether you need a project management tool or a photo editing app, chances are you'll find it here.",
+    },
+    {
+        id: "user-feature-5",
+        title: "Direct Support",
+        content:
+            "Have a question or need a feature? Reach out to developers directly through our platform.",
+    },
+    {
+        id: "user-feature-6",
+        title: "You're in Control",
+        content:
+            "With our in-browser code editor, you can edit apps and customize your experience.",
     },
 ];
 
-export const stats = [
+export const mission = [
     {
-        id: "stats-1",
-        title: "User Active",
-        value: "3800+",
+        id: "mission-1",
+        title: "Protect your data and attention from being sold",
     },
     {
-        id: "stats-2",
-        title: "Trusted by Company",
-        value: "230+",
+        id: "mission-2",
+        title: "Make technology accessible to everyone",
     },
     {
-        id: "stats-3",
-        title: "Transaction",
-        value: "$230M+",
-    },
-];
-
-export const footerLinks = [
-    {
-        title: "Useful Links",
-        links: [
-            {
-                name: "Content",
-                link: "https://www.hoobank.com/content/",
-            },
-            {
-                name: "How it Works",
-                link: "https://www.hoobank.com/how-it-works/",
-            },
-            {
-                name: "Create",
-                link: "https://www.hoobank.com/create/",
-            },
-            {
-                name: "Explore",
-                link: "https://www.hoobank.com/explore/",
-            },
-            {
-                name: "Terms & Services",
-                link: "https://www.hoobank.com/terms-and-services/",
-            },
-        ],
+        id: "mission-3",
+        title: "Enable creators to build the apps they want to build",
     },
     {
-        title: "Community",
-        links: [
-            {
-                name: "Help Center",
-                link: "https://www.hoobank.com/help-center/",
-            },
-            {
-                name: "Partners",
-                link: "https://www.hoobank.com/partners/",
-            },
-            {
-                name: "Suggestions",
-                link: "https://www.hoobank.com/suggestions/",
-            },
-            {
-                name: "Blog",
-                link: "https://www.hoobank.com/blog/",
-            },
-            {
-                name: "Newsletters",
-                link: "https://www.hoobank.com/newsletters/",
-            },
-        ],
-    },
-    {
-        title: "Partner",
-        links: [
-            {
-                name: "Our Partner",
-                link: "https://www.hoobank.com/our-partner/",
-            },
-            {
-                name: "Become a Partner",
-                link: "https://www.hoobank.com/become-a-partner/",
-            },
-        ],
-    },
-];
-
-export const socialMedia = [
-    {
-        id: "social-media-1",
-        icon: instagram,
-        link: "https://www.instagram.com/",
-    },
-    {
-        id: "social-media-2",
-        icon: facebook,
-        link: "https://www.facebook.com/",
-    },
-    {
-        id: "social-media-3",
-        icon: twitter,
-        link: "https://www.twitter.com/",
-    },
-    {
-        id: "social-media-4",
-        icon: linkedin,
-        link: "https://www.linkedin.com/",
-    },
-];
-
-export const clients = [
-    {
-        id: "client-1",
-        logo: airbnb,
-    },
-    {
-        id: "client-2",
-        logo: binance,
-    },
-    {
-        id: "client-3",
-        logo: coinbase,
-    },
-    {
-        id: "client-4",
-        logo: dropbox,
+        id: "mission-4",
+        title: "Ensure creators are rewarded for their contributions",
     },
 ];
