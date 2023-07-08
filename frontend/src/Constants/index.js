@@ -17,93 +17,49 @@ export const navLinks = [
     },
 ];
 
-export const features = [
-    {
-        id: "feature-1",
-        title: "Becoming an Independent Developer",
-        content:
-            "We simplify the process of becoming an independent developer. With our platform, you can focus on what you do best - creating innovative solutions.",
-    },
-    {
-        id: "feature-2",
-        title: "Monetization Simplified",
-        content:
-            "You don't have to worry about monetization schemes. We handle that for you, ensuring you're compensated for the value you bring to the community.",
-    },
-    {
-        id: "feature-3",
-        title: "Ad-Free Experience",
-        content:
-            "Your apps can be free of intrusive ads and restrictive free tiers. This means a better experience for your users and less hassle for you.",
-    },
-    {
-        id: "feature-4",
-        title: "Real-Time User Feedback",
-        content:
-            "Get immediate feedback from users. This helps you understand what users want, reducing the risk of building something that doesn't meet their needs.",
-    },
-    {
-        id: "feature-5",
-        title: "Earn from Your Solutions",
-        content:
-            "If others incorporate your solution into a new app, you get compensated. It's a win-win situation.",
-    },
-];
+export const heroContent = {
+    title: "Welcome to Our Open Source Platform",
+    //    subtitle: "Redefining the Way We Interact with Technology",
+    description: "We're a community of developers and users who believe in the power of open-source software. Our platform is designed to make it easy for developers to share their work and for users to access innovative solutions. ",
+    buttonText: "Sign Up Now",
+};
 
-export const userFeatures = [
-    {
-        id: "user-feature-1",
-        title: "Ease of Use",
-        content:
-            "With Open Source Platform, accessing open-source apps is as easy as clicking a button. No need to navigate through multiple platforms - it's all here.",
-    },
-    {
-        id: "user-feature-2",
-        title: "Community-Vetted Apps",
-        content:
-            "All apps on our platform are community-vetted and verified for security and privacy. You can use them with confidence.",
-    },
-    {
-        id: "user-feature-3",
-        title: "Ad-Free and Privacy-Focused",
-        content:
-            "We prioritize your privacy. Our platform is free of ads, trackers, and we don't sell your data.",
-    },
-    {
-        id: "user-feature-4",
-        title: "All in One Place",
-        content:
-            "No need to pay for dozens of apps and services. Whether you need a project management tool or a photo editing app, chances are you'll find it here.",
-    },
-    {
-        id: "user-feature-5",
-        title: "Direct Support",
-        content:
-            "Have a question or need a feature? Reach out to developers directly through our platform.",
-    },
-    {
-        id: "user-feature-6",
-        title: "You're in Control",
-        content:
-            "With our in-browser code editor, you can edit apps and customize your experience.",
-    },
-];
+export const developersContent = {
+    title: "For Developers",
+    items: [
+        "Becoming an Independent Developer: We simplify the process of becoming an independent developer. With our platform, you can focus on what you do best - creating innovative solutions.",
+        "Monetization Simplified: You don't have to worry about monetization schemes. We handle that for you, ensuring you're compensated for the value you bring to the community.",
+        "Ad-Free Experience: Your apps can be free of intrusive ads and restrictive free tiers. This means a better experience for your users and less hassle for you.",
+        "Real-Time User Feedback: Get immediate feedback from users. This helps you understand what users want, reducing the risk of building something that doesn't meet their needs.",
+        "Earn from Your Solutions: If others incorporate your solution into a new app, you get compensated. It's a win-win situation.",
+    ],
+};
 
-export const mission = [
-    {
-        id: "mission-1",
-        title: "Protect your data and attention from being sold",
-    },
-    {
-        id: "mission-2",
-        title: "Make technology accessible to everyone",
-    },
-    {
-        id: "mission-3",
-        title: "Enable creators to build the apps they want to build",
-    },
-    {
-        id: "mission-4",
-        title: "Ensure creators are rewarded for their contributions",
-    },
-];
+export const usersContent = {
+    title: "For Users",
+    items: [
+        "Ease of Use: With Open Source Platform, accessing open-source apps is as easy as clicking a button. No need to navigate through multiple platforms - it's all here.",
+        "Community-Vetted Apps: All apps on our platform are community-vetted and verified for security and privacy. You can use them with confidence.",
+        "Ad-Free and Privacy-Focused: We prioritize your privacy. Our platform is free of ads, trackers, and we don't sell your data.",
+        "All in One Place: No need to pay for dozens of apps and services. Whether you need a project management tool or a photo editing app, chances are you'll find it here.",
+        "Direct Support: Have a question or need a feature? Reach out to developers directly through our platform.",
+        "You're in Control: With our in-browser code editor, you can edit apps and customize your experience.",
+    ],
+};
+
+export const missionContent = {
+    title: "Our Mission",
+    subheading: "We're here to create a platform that benefits both users and creators.",
+    items: [
+        "Protect your data and attention from being sold",
+        "Make technology accessible to everyone",
+        "Enable creators to build the apps they want to build",
+        "Ensure creators are rewarded for their contributions",
+    ],
+};
+
+export const signUpContent = {
+    title: "Join us today and experience the difference.",
+    description: "Sign up to start using our platform, access a wide range of open-source apps, and contribute to the community. It's free and easy to get started.",
+    buttonText: "Sign Up Now",
+};
