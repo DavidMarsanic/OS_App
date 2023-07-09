@@ -1,17 +1,14 @@
 import { Navbar } from '../components/LandingPageComponents';
 
 // Reusable styles
-const sectionStyle = "w-full px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8";
+const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
+const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
 const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-lg text-center";
 const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
 const subheadingStyle = "text-xl font-semibold mb-2";
 const textStyle = "mb-4";
 const imageStyle = "w-32 h-32 bg-blue-500 mx-auto";
-const missionStyle = "md:1/2";
-const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
-const heroTitleStyle = "text-5xl font-bold mb-6 text-center";
-const heroSubtitleStyle = "text-2xl text-center mb-12";
-const heroImageStyle = "w-64 h-64 bg-blue-500 rounded-full";
+const missionStyle = "w-full";
 
 export default function Test() {
     return (
@@ -19,9 +16,9 @@ export default function Test() {
             <Navbar />
 
             <section className={heroStyle}>
-                <h1 className={heroTitleStyle}>Welcome to Our Open Source Platform</h1>
-                <p className={heroSubtitleStyle}>Redefining the Way We Interact with Technology</p>
-                <div className={heroImageStyle}></div>
+                <h1 className="text-5xl font-bold mb-6 text-center">Welcome to Our Open Source Platform</h1>
+                <p className="text-2xl text-center mb-12">Redefining the Way We Interact with Technology</p>
+                <div className="w-64 h-64 bg-blue-500 rounded-full"></div>
             </section>
 
             <h2 className={titleStyle}>For Developers</h2>
