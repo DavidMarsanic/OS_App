@@ -6,17 +6,23 @@ const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-l
 const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
 const subheadingStyle = "text-xl font-semibold mb-2";
 const textStyle = "mb-4";
-const imageStyle = "w-32 h-32 bg-white mx-auto";
+const imageStyle = "w-32 h-32 bg-blue-500 mx-auto";
 const missionStyle = "md:1/2";
+const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
+const heroTitleStyle = "text-5xl font-bold mb-6 text-center";
+const heroSubtitleStyle = "text-2xl text-center mb-12";
+const heroImageStyle = "w-64 h-64 bg-blue-500 rounded-full";
 
 export default function Test() {
     return (
         <div className="flex flex-col items-center justify-center bg-black text-white">
             <Navbar />
 
-
-            <h1 className="text-4xl font-bold mb-6">Welcome to Our Open Source Platform</h1>
-            <p className="text-lg text-center mb-12">Redefining the Way We Interact with Technology</p>
+            <section className={heroStyle}>
+                <h1 className={heroTitleStyle}>Welcome to Our Open Source Platform</h1>
+                <p className={heroSubtitleStyle}>Redefining the Way We Interact with Technology</p>
+                <div className={heroImageStyle}></div>
+            </section>
 
             <h2 className={titleStyle}>For Developers</h2>
             <div className={sectionStyle}>
