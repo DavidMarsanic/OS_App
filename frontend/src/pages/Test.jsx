@@ -8,7 +8,7 @@ const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
 const subheadingStyle = "text-xl font-semibold mb-2";
 const textStyle = "mb-4";
 const imageStyle = "w-32 h-32 bg-blue-500 mx-auto";
-const missionStyle = "w-full";
+const missionStyle = "md:1/2";
 
 export default function Test() {
     return (
@@ -66,13 +66,13 @@ export default function Test() {
 
                 <div className={boxStyle}>
                     <h3 className={subheadingStyle}>Community-Vetted Apps</h3>
-                    <p className={textStyle}>All apps are vetted by our community for safety and quality.</p>
+                    <p className={textStyle}>All apps are vetted by our community.</p>
                     <div className={imageStyle}></div>
                 </div>
 
                 <div className={boxStyle}>
                     <h3 className={subheadingStyle}>Ad-Free and Privacy-Focused</h3>
-                    <p className={textStyle}>Experience ad-free browsing and privacy-focused design.</p>
+                    <p className={textStyle}>No ads, no trackers. Forever.</p>
                     <div className={imageStyle}></div>
                 </div>
 
