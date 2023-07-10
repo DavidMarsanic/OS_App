@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
 const CTAStyle = "bg-blue-500 mt-12 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4";
 const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
-const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-lg text-center";
+const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-lg text-center transform transition duration-500 ease-in-out hover:scale-105";
 const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
 const subheadingStyle = "text-xl font-semibold mb-2";
 const textStyle = "mb-4";
-const buttonStyle = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4";
 const imageStyle = "w-32 h-32 bg-blue-500 mx-auto";
 const missionStyle = "md:1/2";
 
