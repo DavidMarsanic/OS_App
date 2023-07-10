@@ -1,7 +1,9 @@
 import { Navbar } from '../components/LandingPageComponents';
+import { Link } from 'react-router-dom';
 
 // Reusable styles
 const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
+const CTAStyle = "bg-blue-500 mt-12 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4";
 const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
 const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-lg text-center";
 const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
@@ -19,7 +21,13 @@ export default function Test() {
                 <h1 className="text-5xl font-bold mb-6 text-center">Welcome to Our Open Source Platform</h1>
                 <p className="text-2xl text-center mb-12">Redefining the Way We Interact with Technology</p>
                 <div className="w-64 h-64 bg-blue-500 rounded-full"></div>
+
+                <Link to="/sign-up">
+                    <button className={CTAStyle}>Sign Up Now!</button>
+                </Link>
             </section>
+
+
 
             <h2 className={titleStyle}>For Developers</h2>
             <div className={sectionStyle}>
