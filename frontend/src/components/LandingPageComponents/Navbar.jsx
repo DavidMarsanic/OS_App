@@ -17,7 +17,7 @@ const NavBar = () => {
                         key={nav.id}
                         className={`font-poppins
                         font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} 
-                        text-white`}
+                        text-white transform transition duration-500 ease-in-out hover:scale-105 hover:text-gray-300`}
                     >
                         <a href={`#$nav.id`}>
                             {nav.title}
@@ -25,7 +25,7 @@ const NavBar = () => {
                     </li>
                 ))}
                 <li className="ml-4">
-                    <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full">
+                    <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500">
                         Sign Up
                     </button>
                 </li>
@@ -45,7 +45,7 @@ const NavBar = () => {
                                 key={nav.id}
                                 className={`font-poppins
                         font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'} 
-                        text-white `}
+                        text-white transform transition duration-500 ease-in-out hover:scale-105 hover:text-gray-300`}
                             >
                                 <a href={`#$nav.id`}>
                                     {nav.title}
@@ -53,7 +53,7 @@ const NavBar = () => {
                             </li>
                         ))}
                         <li className="mt-4">
-                            <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full">
+                            <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500">
                                 Sign Up
                             </button>
                         </li>
