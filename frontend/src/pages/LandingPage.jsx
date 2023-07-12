@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Reusable styles
 const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
-const CTAStyle = "bg-blue-500 mt-12 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4";
+const CTAStyle = "bg-white text-primary font-semibold py-4 px-8 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500";
 const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
 const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-gray-800 p-6 rounded-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-700";
 const titleStyle = "text-2xl font-semibold mb-4 w-full text-center";
@@ -23,7 +23,7 @@ export default function LandingPage() {
                 <div className="w-64 h-64 bg-blue-500 rounded-full"></div>
 
                 <Link to="/sign-up">
-                    <button className={CTAStyle}>Sign Up Now!</button>
+                    <button className={`${CTAStyle} mt-4`}>Sign Up Now!</button>
                 </Link>
             </section>
 
@@ -136,8 +136,11 @@ export default function LandingPage() {
             </div>
 
             <div className="w-full flex flex-col items-center justify-center px-4 sm:px-8 py-12">
-                <p className="text-lg text-center mb-4">Join us today and experience the difference.</p>
+                <Link to="/sign-up">
+                    <button className={CTAStyle}>Join us today and experience the difference</button>
+                </Link>
             </div>
+
         </div >
     );
 }
