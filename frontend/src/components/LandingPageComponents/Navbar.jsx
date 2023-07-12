@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import { close, logo, menu } from '../../assets';
 import { navLinks } from '../../constants';
@@ -25,10 +26,11 @@ const NavBar = () => {
                     </li>
                 ))}
                 <li className="ml-4">
-                    <button className="bg-white text-primary font-semibold py-2 px-4 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500">
+                    <Link to="/sign-up" className="bg-white text-primary font-semibold py-2 px-4 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500">
                         Sign Up
-                    </button>
+                    </Link>
                 </li>
+
             </ul>
 
             <div className='sm:hidden flex flex-1 justify-end items-center'>
