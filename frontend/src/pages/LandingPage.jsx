@@ -1,7 +1,6 @@
-import { Navbar } from '../components/LandingPageComponents';
+import { Navbar, Footer } from '../components/LandingPageComponents';
 import { Link } from 'react-router-dom';
 
-// Reusable styles
 const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-black";
 const CTAStyle = "bg-white text-primary font-semibold py-4 px-8 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500";
 const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
@@ -141,6 +140,9 @@ export default function LandingPage() {
                 </Link>
             </div>
 
+            <Footer />
+
         </div >
     );
+
 }
