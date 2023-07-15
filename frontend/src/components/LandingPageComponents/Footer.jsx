@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const footerStyle = "w-full bg-gray-800 text-white py-6 flex flex-col items-center justify-center text-center text-sm";
+const footerStyle = "w-full bg-black text-white py-6 flex flex-col items-center justify-center text-center text-sm";
 
 function Footer() {
     return (
