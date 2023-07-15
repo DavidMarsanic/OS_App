@@ -54,7 +54,7 @@ const SignUp = () => {
   const disableForm = isLoading || needsEmailVerification;
 
   return (
-    <div className={`${containerStyle} min-h-screen flex items-center justify-center bg-black text-white`}>
+    <div className={`${containerStyle} min-h-screen flex items-center justify-center text-white`}>
       <div className={cardStyle}>
         <Link to="/join">
           <div className={logoWrapperStyle}>
