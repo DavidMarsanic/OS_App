@@ -1,7 +1,7 @@
 import { Navbar, Footer } from '../components/LandingPageComponents';
 import { Link } from 'react-router-dom';
 
-const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-600";
+const heroStyle = "w-full px-2 py-24 text-white flex flex-col items-center justify-center bg-gradient-to-r from-yellow-800 to-purple-900";
 const CTAStyle = "bg-white text-primary font-semibold py-4 px-8 rounded-full transform transition duration-500 ease-in-out hover:scale-105 hover:bg-blue-500";
 const sectionStyle = "px-2 sm:px-2 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mb-8";
 const boxStyle = "flex flex-col w-full col-span-1 my-2 bg-black p-6 rounded-lg text-center transform transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-700 border border-white";
@@ -13,7 +13,7 @@ const missionStyle = "md:1/2";
 
 export default function LandingPage() {
     return (
-        <div className="flex flex-col items-center justify-center bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-600 text-white">
+        <div className="flex flex-col items-center justify-center bg-gradient-to-r from-yellow-800 to-purple-900 text-white">
             <Navbar />
 
             <section className={heroStyle}>

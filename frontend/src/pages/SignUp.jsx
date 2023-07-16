@@ -8,7 +8,7 @@ const SignUpPage = () => {
         <title>Sign up</title>
       </Helmet>
 
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-600 text-white">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-yellow-800 to-purple-900 text-white">
         <SignUp />
       </div>
     </>
